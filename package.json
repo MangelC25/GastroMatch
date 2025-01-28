@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MangelC25/ichiraku-ramen-system.git"
+  },
+  "keywords": [
+    "Restaurant",
+    "anime",
+    "food"
+  ],
+  "author": "Karmaxcodex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MangelC25/ichiraku-ramen-system/issues"
+  },
+  "homepage": "https://github.com/MangelC25/ichiraku-ramen-system#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "4.21.2"
+  }
+}
