@@ -1,0 +1,26 @@
+@use "typography" as fuentes;
+
+$bg-topbar: #474747;
+$text-colortopbar: white;
+$text-colortopbarHover: rgb(0, 126, 223);
+$font-family-Topbar: fuentes.$font-family-Topbar;
+$font-style-Topbar: fuentes.$font-style-Topbar;
+$font-weight-Topbar: fuentes.$font-weight-Topbar;
+
+
+$bg-navbar: black;
+$text-colornavbar: white;
+$text-colornavbarHover: black;
+
+:root {
+  --bg-topbar: $bg-topbar;
+  --text-colortopbar: $text-colortopbar;
+  --text-colortopbarHover: $text-colortopbarHover;
+  --font-family-Topbar: $font-family-Topbar;
+  --font-style-Topbar: $font-style-Topbar;
+  --font-weight-Topbar: $font-weight-Topbar;
+
+  --bg-navbar: $bg-navbar;
+  --text-colornavbar: $text-colornavbar;
+  --text-colornavbarHover: $text-colornavbarHover;
+}

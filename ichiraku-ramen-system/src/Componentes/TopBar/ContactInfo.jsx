@@ -4,7 +4,7 @@ import ContactIcon from "./Subcomponentes/Contacticon";
 export default function ContactInfo() {
 
   const ICONS = [
-    { ICON: Phone, factContact: "(+57) 320 605 8784" },
+    { ICON: Phone, factContact: "(+57) 350 4232423" },
     { ICON: Mail, factContact: "miguelcastpinz@hotmail.com" }
   ];
 

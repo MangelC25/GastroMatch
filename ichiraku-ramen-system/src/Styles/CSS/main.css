@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+:root {
+  --bg-topbar: $bg-topbar;
+  --text-colortopbar: $text-colortopbar;
+  --text-colortopbarHover: $text-colortopbarHover;
+  --font-family-Topbar: $font-family-Topbar;
+  --font-style-Topbar: $font-style-Topbar;
+  --font-weight-Topbar: $font-weight-Topbar;
+  --bg-navbar: $bg-navbar;
+  --text-colornavbar: $text-colornavbar;
+  --text-colornavbarHover: $text-colornavbarHover;
+}
+
+.TopBar {
+  background-color: #474747;
+  color: white;
+  padding: 1rem 5rem;
+}
+.TopBar .ContainTopBar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+.TopBar .ContainTopBar .ContainSocial {
+  gap: 1rem;
+}
+.TopBar .ContainTopBar .ContainSocial .LinkSocial {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.TopBar .ContainTopBar .ContainSocial .LinkSocial :hover {
+  color: rgb(0, 126, 223);
+  transition: 0.5s color ease-in-out;
+}
+.TopBar .ContainTopBar .ContainContact {
+  gap: 2rem;
+}
+.TopBar .ContainTopBar .ContainContact .ContactC {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.TopBar .ContainTopBar .ContainContact,
+.TopBar .ContainTopBar .ContainSocial {
+  font-family: "DM Sans", serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TopBar .ContainTopBar .ContainContact svg,
+.TopBar .ContainTopBar .ContainSocial svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 45px;
+}/*# sourceMappingURL=main.css.map */
