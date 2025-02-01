@@ -8,9 +8,16 @@ $font-style-Topbar: fuentes.$font-style-Topbar;
 $font-weight-Topbar: fuentes.$font-weight-Topbar;
 
 
-$bg-navbar: black;
-$text-colornavbar: white;
-$text-colornavbarHover: black;
+$font-family-Menubar: fuentes.$font-family-Menubar;
+$font-style-Menubar: fuentes.$font-style-Menubar;
+$font-weight-Menubar: fuentes.$font-weight-Menubar;
+
+$global-padding: 1rem 5rem;
+
+$bg-header: rgb(255, 255, 255);
+$text-colornavbar: rgb(0, 0, 0);
+$text-colornavbarHover: rgb(255, 255, 255);
+$bg-button-header: rgb(224, 134, 0);
 
 :root {
   --bg-topbar: $bg-topbar;
@@ -20,7 +27,11 @@ $text-colornavbarHover: black;
   --font-style-Topbar: $font-style-Topbar;
   --font-weight-Topbar: $font-weight-Topbar;
 
-  --bg-navbar: $bg-navbar;
+  --bg-header: $bg-header;
+  --bg-button-header: $bg-button-header;
   --text-colornavbar: $text-colornavbar;
   --text-colornavbarHover: $text-colornavbarHover;
+  --font-family-Menubar: $font-family-Menubar;
+  --font-style-Menubar: $font-style-Menubar;
+  --font-weight-Menubar: $font-weight-Menubar;
 }

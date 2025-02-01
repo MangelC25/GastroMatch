@@ -1,9 +1,11 @@
-@use "../Globals/variables" as variables;
+@use "../../Globals/variables" as variables;
 
 .TopBar {
+  position: fixed;
+  width: 100%;
   background-color: variables.$bg-topbar;
   color: variables.$text-colortopbar;
-  padding: 1rem 5rem;
+  padding: variables.$global-padding;
 
   .ContainTopBar {
     display: flex;
