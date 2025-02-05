@@ -5,7 +5,7 @@ export default function ContactInfo() {
 
   const ICONS = [
     { ICON: Phone, factContact: "(+57) 350 4232423" },
-    { ICON: Mail, factContact: "miguelcastpinz@hotmail.com" }
+    { ICON: Mail, factContact: "karmaxcodesoporte@gmail.com" }
   ];
 
   return (

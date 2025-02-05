@@ -10,9 +10,10 @@
   width: 100%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   top: 3.5rem;
   background-color: variables.$bg-header;
+  z-index: 10000000000;
 
   .ContainerLogo {
     user-select: none;
@@ -43,6 +44,10 @@
       padding: 0.5rem 2rem;
       font-size: 1rem;
       background: transparent;
+
+      &:hover{
+        cursor : url('../../../../public/pizza.svg'), auto; 
+      }
     }
 
     .SearchIcon {
@@ -61,6 +66,7 @@
     width: 50rem;
     height: 3.2rem;
     padding: 0 1rem;
+    
 
     #navbar {
       width: 100%;
@@ -102,6 +108,7 @@
               }
 
               &:hover {
+                cursor : url('../../../../public/pizza.svg'), auto; 
                 &::before {
                   width: 100%;
                 }
@@ -113,6 +120,8 @@
               border-radius: 1rem;
               background-color: variables.$bg-button-header;
               box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+
               > a {
                 color: variables.$text-colornavbarHover;
               }
@@ -144,6 +153,7 @@
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease-in-out;
       z-index: 1;
+      color: rgb(0, 27, 51);
 
       &::before{
         content: "";
@@ -161,6 +171,7 @@
 
       &:hover, &:focus{
         color: variables.$text-colornavbarHover;
+        cursor : url('../../../../public/pizza.svg'), auto; 
 
         &::before{
           transition: .3s all ease-in-out;

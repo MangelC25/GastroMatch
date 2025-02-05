@@ -7,15 +7,17 @@ $font-family-Topbar: fuentes.$font-family-Topbar;
 $font-style-Topbar: fuentes.$font-style-Topbar;
 $font-weight-Topbar: fuentes.$font-weight-Topbar;
 
-
 $font-family-Menubar: fuentes.$font-family-Menubar;
 $font-style-Menubar: fuentes.$font-style-Menubar;
 $font-weight-Menubar: fuentes.$font-weight-Menubar;
 
+$font-family-Home: fuentes.$font-family-Home;
+$font-weight-Home: fuentes.$font-weight-Home;
+
 $global-padding: 1rem 5rem;
 
 $bg-header: rgb(255, 255, 255);
-$text-colornavbar: rgb(0, 0, 0);
+$text-colornavbar: rgb(0, 27, 51);
 $text-colornavbarHover: rgb(255, 255, 255);
 $bg-button-header: rgb(224, 134, 0);
 
@@ -34,4 +36,7 @@ $bg-button-header: rgb(224, 134, 0);
   --font-family-Menubar: $font-family-Menubar;
   --font-style-Menubar: $font-style-Menubar;
   --font-weight-Menubar: $font-weight-Menubar;
+
+  --font-family-Home: $font-family-Home;
+  --font-weight-Home: $font-weight-Home;
 }

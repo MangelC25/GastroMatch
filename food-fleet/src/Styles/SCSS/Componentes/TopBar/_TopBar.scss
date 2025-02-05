@@ -21,8 +21,9 @@
         text-decoration: none;
         cursor: pointer;
 
-        :hover {
+        &:hover {
           color: variables.$text-colortopbarHover;
+          cursor : url('../../../../public/pizza.svg'), auto; 
           transition: 0.5s color ease-in-out;
         }
       }

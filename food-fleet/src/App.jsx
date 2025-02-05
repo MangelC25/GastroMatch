@@ -1,6 +1,7 @@
 import Header from "./Componentes/Header/Header";
 import { TopBar } from "./Componentes/TopBar/TopBar";
 import { motion } from "motion/react";
+import Home from "./Componentes/Home/Home";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <TopBar />
       </motion.div>
       <Header />
+      <Home/>
     </>
   );
 }
