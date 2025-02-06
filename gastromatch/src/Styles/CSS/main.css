@@ -102,17 +102,14 @@ html {
   z-index: 10000000000;
 }
 #header .ContainerLogo {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   width: 16rem;
   overflow: hidden;
 }
 #header .ContainerLogo a img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #header .ContainSearch {
   display: flex;
@@ -255,8 +252,10 @@ html {
   display: flex;
   align-items: center;
   top: 8.8rem;
-  height: 35rem;
+  height: 32.1rem;
   overflow: hidden;
+  background: linear-gradient(to right, #002a62, #5098f7);
+  z-index: 0;
 }
 #HomeSection #HomeContainer {
   padding: 1rem;
@@ -268,26 +267,24 @@ html {
 }
 #HomeSection #HomeContainer h1 {
   font-family: "Archivo Black", serif;
-  color: rgb(0, 27, 51);
-  font-size: 2.5rem;
-}
-#HomeSection #HomeContainer h1 #foodSpan {
-  display: inline-block;
-  color: #b77a00;
+  color: rgb(255, 255, 255);
+  font-size: 2.3rem;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
 }
 #HomeSection #HomeContainer p {
-  color: rgb(0, 27, 51);
+  color: rgb(255, 255, 255);
   font-family: "DM Sans", serif;
+  margin-bottom: 1rem;
 }
 #HomeSection #HomeContainer button {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
   border: none;
-  background-color: rgb(0, 27, 51);
+  background-color: rgb(0, 0, 0);
   color: white;
   transition: background-color 0.3s ease-out;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
 }
 #HomeSection #HomeContainer button:hover {
   cursor: url("../../../../public/pizza.svg"), auto;
@@ -295,11 +292,14 @@ html {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 #HomeSection #HomeContainer .ContainSearch {
+  border-radius: 5px;
   display: flex;
   position: relative;
   width: 25rem;
-  padding: 0.3rem;
   margin-bottom: 1rem;
+  z-index: 10;
+  background-color: white;
+  z-index: 15;
 }
 #HomeSection #HomeContainer .ContainSearch .SearchInput {
   border: none;
@@ -307,7 +307,7 @@ html {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 1.8rem;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1rem;
   background: transparent;
 }
@@ -318,43 +318,54 @@ html {
   position: absolute;
   top: 50%;
   width: 1rem;
-  left: 1rem;
+  left: 0.5rem;
   transform: translateY(-50%);
-  color: #888;
+  color: #5e5e5e;
   z-index: -999;
 }
 #HomeSection #PersonaContainer {
   position: absolute;
   top: 0;
-  left: 44%;
-  width: 65vw;
+  left: 40%;
+  width: 60vw;
   height: 100%;
-  background: linear-gradient(to right, #ffd175, #b77a00);
+  overflow: hidden;
   z-index: -4;
 }
-#HomeSection #PersonaContainer #img1 {
+#HomeSection #PersonaContainer .background-image {
   position: absolute;
-  left: 10%;
-  width: 65%;
-  height: auto;
-  transition: all 1s;
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#HomeSection #PersonaContainer .background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.2)); /* Color de la superposición */
+  z-index: 0; /* Asegura que quede sobre la imagen de fondo */
 }
 #HomeSection::before {
   content: "";
   font-family: "shape divider from ShapeDividers.com";
   height: 100%;
   position: absolute;
-  z-index: 3;
   pointer-events: none;
   background-repeat: no-repeat;
   left: -0.1vw;
-  right: 55vw;
+  right: 50vw;
   top: 0;
   background-size: 20% auto;
   background-position: 100% 0;
-  background-image: url("../../../../../public/ShapeDivisor.svg");
-  animation: moveBackground 60s infinite alternate ease-in-out; /* Animación */
+  background-image: url('data:image/svg+xml;charset=utf8, <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 1000"><g fill="%2320569d"><path opacity=".5" d="M87 .1H74.8L55.5 220.8 29.3.1H18l38 250L87 .1z"/><path opacity=".5" d="M74.8.1H66L53.3 145.3 36 .1h-6.7l26.2 220.7L74.8.1z"/><path opacity=".5" d="M74.8.1H66L53.3 145.3 36 .1h-6.7l26.2 220.7L74.8.1z"/><path opacity=".5" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".5" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".75" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".5" d="M56 750.1l-38 250h12.3l26.2-220.7 19.3 220.7H87l-31-250zM56 750.1l31-250-31-250-38 250zm19.7-250L56.5 721 30.3 500l26.2-220.7z"/><path d="M18 500.1l38-250L18 .1H0v1000h18l38-250-38-250z"/><path d="M56.5 720.9L75.7 500 56.5 279.4 30.3 500.1zM70 500L55.6 664.7 36 500.1l19.6-164.5z" opacity=".5"/><path d="M56.5 720.9L75.7 500 56.5 279.4 30.3 500.1zM70 500L55.6 664.7 36 500.1l19.6-164.5z" opacity=".5"/><path opacity=".5" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".5" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".75" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".5" d="M30.3 1000.1H36L53.3 855 66 1000.1h9.8L56.5 779.4l-26.2 220.7z"/><path opacity=".5" d="M30.3 1000.1H36L53.3 855 66 1000.1h9.8L56.5 779.4l-26.2 220.7z"/><path opacity=".5" d="M36 1000.1h30L53.3 855 36 1000.1z"/><path opacity=".5" d="M36 1000.1h30L53.3 855 36 1000.1z"/><path opacity=".75" d="M36 1000.1h30L53.3 855 36 1000.1z"/></g></svg>');
+  animation: moveBackground 10s infinite alternate ease-in-out; /* Animación */
+  overflow: hidden;
   z-index: -3;
 }
 
@@ -363,7 +374,7 @@ html {
     background-position: 100% 0; /* Posición inicial */
   }
   50% {
-    background-position: 100% 50%; /* Desplaza el fondo hacia la derecha */
+    background-position: 100% 50%; /* Desplaza el fondo hacia arriba */
   }
   100% {
     background-position: 100% 100%; /* Regresa al inicio */
