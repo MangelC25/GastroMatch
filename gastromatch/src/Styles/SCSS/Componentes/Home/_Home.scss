@@ -1,14 +1,9 @@
 @use "../../Globals/variables" as variables;
 
 #HomeSection {
-  padding: variables.$global-padding;
-  position: relative;
-  display: flex;
-  align-items: center;
-  top: 8.8rem;
-  height: 32.1rem;
-  overflow: hidden;
-  background: linear-gradient(to right, #002a62, #5098f7);
+  margin-top: 8.8rem;
+  height: 32rem;
+  background: linear-gradient(to right, #62000d, #ff0022);
   z-index: 0;
 
   #HomeContainer {
@@ -23,7 +18,7 @@
       font-family: variables.$font-family-Home;
       color: rgb(255, 255, 255);
       font-size: 2.3rem;
-      text-shadow: 1px 1px 10px rgb(0, 0, 0);
+      text-shadow: 1px 1px 10px #000000;
     }
 
     p {
@@ -36,8 +31,9 @@
       width: fit-content;
       padding: 0.5rem 2rem;
       border-radius: 2rem;
+      font-size: 1.2rem;
       border: none;
-      background-color: rgb(0, 0, 0);
+      background-color: #3a8c00;
       color: white;
       transition: background-color 0.3s ease-out;
       box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
@@ -78,7 +74,7 @@
         position: absolute;
         top: 50%;
         width: 1rem;
-        left: .5rem; // Espaciado desde la izquierda
+        left: 0.5rem; // Espaciado desde la izquierda
         transform: translateY(-50%);
         color: #5e5e5e;
         z-index: -999;
@@ -89,8 +85,8 @@
   #PersonaContainer {
     position: absolute;
     top: 0;
-    left: 40%;
-    width: 60vw;
+    left: 50%;
+    width: 50vw;
     height: 100%;
     overflow: hidden;
     z-index: -4;
@@ -129,14 +125,39 @@
     pointer-events: none;
     background-repeat: no-repeat;
     left: -0.1vw;
-    right: 50vw;
-    top: 0;
+    right: 40vw;
     background-size: 20% auto;
     background-position: 100% 0;
-    background-image: url('data:image/svg+xml;charset=utf8, <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 1000"><g fill="%2320569d"><path opacity=".5" d="M87 .1H74.8L55.5 220.8 29.3.1H18l38 250L87 .1z"/><path opacity=".5" d="M74.8.1H66L53.3 145.3 36 .1h-6.7l26.2 220.7L74.8.1z"/><path opacity=".5" d="M74.8.1H66L53.3 145.3 36 .1h-6.7l26.2 220.7L74.8.1z"/><path opacity=".5" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".5" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".75" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".5" d="M56 750.1l-38 250h12.3l26.2-220.7 19.3 220.7H87l-31-250zM56 750.1l31-250-31-250-38 250zm19.7-250L56.5 721 30.3 500l26.2-220.7z"/><path d="M18 500.1l38-250L18 .1H0v1000h18l38-250-38-250z"/><path d="M56.5 720.9L75.7 500 56.5 279.4 30.3 500.1zM70 500L55.6 664.7 36 500.1l19.6-164.5z" opacity=".5"/><path d="M56.5 720.9L75.7 500 56.5 279.4 30.3 500.1zM70 500L55.6 664.7 36 500.1l19.6-164.5z" opacity=".5"/><path opacity=".5" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".5" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".75" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".5" d="M30.3 1000.1H36L53.3 855 66 1000.1h9.8L56.5 779.4l-26.2 220.7z"/><path opacity=".5" d="M30.3 1000.1H36L53.3 855 66 1000.1h9.8L56.5 779.4l-26.2 220.7z"/><path opacity=".5" d="M36 1000.1h30L53.3 855 36 1000.1z"/><path opacity=".5" d="M36 1000.1h30L53.3 855 36 1000.1z"/><path opacity=".75" d="M36 1000.1h30L53.3 855 36 1000.1z"/></g></svg>');
+    background-image: url('data:image/svg+xml;charset=utf8, <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 1000"><g fill="%23ff0022"><path opacity=".5" d="M87 .1H74.8L55.5 220.8 29.3.1H18l38 250L87 .1z"/><path opacity=".5" d="M74.8.1H66L53.3 145.3 36 .1h-6.7l26.2 220.7L74.8.1z"/><path opacity=".5" d="M74.8.1H66L53.3 145.3 36 .1h-6.7l26.2 220.7L74.8.1z"/><path opacity=".5" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".5" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".75" d="M66 .1H36l17.3 145.2L66 .1z"/><path opacity=".5" d="M56 750.1l-38 250h12.3l26.2-220.7 19.3 220.7H87l-31-250zM56 750.1l31-250-31-250-38 250zm19.7-250L56.5 721 30.3 500l26.2-220.7z"/><path d="M18 500.1l38-250L18 .1H0v1000h18l38-250-38-250z"/><path d="M56.5 720.9L75.7 500 56.5 279.4 30.3 500.1zM70 500L55.6 664.7 36 500.1l19.6-164.5z" opacity=".5"/><path d="M56.5 720.9L75.7 500 56.5 279.4 30.3 500.1zM70 500L55.6 664.7 36 500.1l19.6-164.5z" opacity=".5"/><path opacity=".5" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".5" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".75" d="M55.6 664.7L70 500.1 55.6 335.6 36 500.1l19.6 164.6z"/><path opacity=".5" d="M30.3 1000.1H36L53.3 855 66 1000.1h9.8L56.5 779.4l-26.2 220.7z"/><path opacity=".5" d="M30.3 1000.1H36L53.3 855 66 1000.1h9.8L56.5 779.4l-26.2 220.7z"/><path opacity=".5" d="M36 1000.1h30L53.3 855 36 1000.1z"/><path opacity=".5" d="M36 1000.1h30L53.3 855 36 1000.1z"/><path opacity=".75" d="M36 1000.1h30L53.3 855 36 1000.1z"/></g></svg>');
     animation: moveBackground 10s infinite alternate ease-in-out; /* Animación */
     overflow: hidden;
     z-index: -3;
+  }
+}
+
+.shapedividers_com-4450 {
+  overflow: hidden;
+  position: relative;
+  top: -1.6rem;
+  height: 10rem;
+  z-index: -10;
+
+  &::before {
+    content: "";
+    font-family: "shape divider from ShapeDividers.com";
+    position: absolute;
+    z-index: -3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw;
+    background-size: 100% 150px;
+    background-position: 50% 0%;
+    background-image: url('../../../../../public/a.svg'); 
+
+    
   }
 }
 

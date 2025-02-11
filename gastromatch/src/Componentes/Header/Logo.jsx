@@ -1,4 +1,4 @@
-import logo from "../../assets/img/FoodFleet_logo.png"
+import logo from "../../assets/img/GastroMatch.png"
 
 export default function Logo() {
   return (

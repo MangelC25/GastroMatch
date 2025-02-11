@@ -2,10 +2,13 @@
 
 .TopBar {
   position: fixed;
+  top: 0; 
+  left: 0;
   width: 100%;
   background-color: variables.$bg-topbar;
   color: variables.$text-colortopbar;
   padding: variables.$global-padding;
+  z-index: 100000;
 
   .ContainTopBar {
     display: flex;

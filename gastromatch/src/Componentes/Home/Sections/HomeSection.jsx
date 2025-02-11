@@ -12,10 +12,24 @@ export default function HomeSection() {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Cambiar el texto del botón basado en la imagen actual
+  const getButtonText = () => {
+    switch (currentImageIndex) {
+      case 0:
+        return "Reservar ahora";
+      case 1:
+        return "Ver eventos";
+      case 2:
+        return "Pedir a domicilio";
+      default:
+        return "";
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Cambia cada 3 segundos
+    }, 5000); // Cambia cada 5 segundos
     return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
   }, [images.length]);
 
@@ -36,7 +50,7 @@ export default function HomeSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             className="background-image"
           ></motion.div>
         </AnimatePresence>
@@ -63,8 +77,19 @@ export default function HomeSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+          className="cta-button"
         >
-          Encontrar Comida
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={currentImageIndex} // Cambia el texto según el índice
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {getButtonText()}
+            </motion.span>
+          </AnimatePresence>
         </motion.button>
       </div>
     </motion.section>
