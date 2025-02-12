@@ -21,6 +21,8 @@ $text-colornavbar: rgb(51, 36, 0);
 $text-colornavbarHover: rgb(255, 255, 255);
 $bg-button-header: rgb(224, 108, 0);
 
+$font-family-Title: fuentes.$font-family-Title;
+
 :root {
   --bg-topbar: $bg-topbar;
   --text-colortopbar: $text-colortopbar;
@@ -39,4 +41,6 @@ $bg-button-header: rgb(224, 108, 0);
 
   --font-family-Home: $font-family-Home;
   --font-weight-Home: $font-weight-Home;
+
+  --font-family-Title:$font-family-Title;
 }

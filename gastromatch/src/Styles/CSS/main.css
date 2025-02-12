@@ -18,6 +18,7 @@
   --font-weight-Menubar: $font-weight-Menubar;
   --font-family-Home: $font-family-Home;
   --font-weight-Home: $font-weight-Home;
+  --font-family-Title:$font-family-Title;
 }
 
 * {
@@ -429,6 +430,7 @@ section {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, #ffc95d, #ff6700);
 }
 #services .container .cards-services-container .containerCard .card-service {
   display: flex;
@@ -458,6 +460,7 @@ section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #services .container .cards-services-container .containerCard .card-service .service-description {
+  font-size: 0.9rem;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -489,6 +492,10 @@ section {
 }
 #services .container .services-description p {
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 #services .container .services-description p #CheckCircle {
   color: #3a8c00;
@@ -513,5 +520,96 @@ section {
   top: -0.1vw;
   background-size: 100% 150px;
   background-position: 50% 100%;
-  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%235d5d5d" d="M0 288l1440-128v160H0z"/><path fill="%235d5d5d" opacity=".66" d="M0 192l1440-96v224H0z"/></svg>');
+  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23232323" d="M0 288l1440-128v160H0z"/><path fill="%23232323" opacity=".66" d="M0 192l1440-96v224H0z"/></svg>');
+}
+
+.top-restaurants-section {
+  background: linear-gradient(to bottom, #232323, #1a1a1a, #101010);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.top-restaurants-section .container {
+  padding: 1rem;
+  width: 100%;
+}
+.top-restaurants-section .section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.top-restaurants-section .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(255, 106, 0, 0.6);
+  background: linear-gradient(to right, #ff0000 30%, #ffb300 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+.top-restaurants-section .section-title p {
+  width: 70%;
+  color: white;
+}
+.top-restaurants-section .top-restaurants {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  color: white;
+}
+.top-restaurants-section .top-restaurants .top-restaurant {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.top-restaurants-section .top-restaurants .top-restaurant:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+.top-restaurants-section .top-restaurants .top-restaurant img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.top-restaurants-section .top-restaurants .top-restaurant .restaurant-info {
+  margin-top: 15px;
+  text-align: left;
+}
+.top-restaurants-section .top-restaurants .top-restaurant .restaurant-info h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.top-restaurants-section .top-restaurants .top-restaurant .restaurant-info p {
+  font-size: 1.2rem;
+  color: #ffb300;
+  margin: 10px 0;
+}
+.top-restaurants-section .top-restaurants .top-restaurant .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #ff0000, #793400, #ff7300);
+  border-radius: 8px;
+  margin-top: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
+}
+.top-restaurants-section .top-restaurants .top-restaurant .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 115, 0, 0.5);
 }/*# sourceMappingURL=main.css.map */

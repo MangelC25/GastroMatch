@@ -3,10 +3,9 @@ export default function CardsServices({
   description,
   image,
   button,
-  bgColor,
 }) {
   return (
-    <div className="containerCard" style={{ background: bgColor}}>
+    <div className="containerCard">
       <div className="card-service">
         <div className="service-icon">
           <figure className="service-image">

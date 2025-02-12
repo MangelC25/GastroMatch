@@ -1,5 +1,6 @@
 import HomeSection from "./Sections/HomeSection";
 import ServicesSection from "./Sections/ServicesSection";
+import TopRestaurantsSection from "./Sections/TopRestaurantsSection";
 import { motion } from "motion/react";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
       ></motion.div>
+      <TopRestaurantsSection />
     </>
   );
 }
