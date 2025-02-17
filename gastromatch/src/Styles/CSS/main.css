@@ -11,6 +11,7 @@
   --font-weight-Topbar: $font-weight-Topbar;
   --bg-header: $bg-header;
   --bg-button-header: $bg-button-header;
+  --bg-button: $bg-button;
   --text-colornavbar: $text-colornavbar;
   --text-colornavbarHover: $text-colornavbarHover;
   --font-family-Menubar: $font-family-Menubar;
@@ -202,7 +203,7 @@ section {
 #header #Menubar #navbar #nav-container ul li:hover {
   transition: background-color 0.3s ease-out;
   border-radius: 1rem;
-  background-color: rgb(224, 108, 0);
+  background: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 #header #Menubar #navbar #nav-container ul li:hover > a {
@@ -238,7 +239,7 @@ section {
   right: 50%;
   bottom: 0;
   opacity: 0;
-  background-color: rgb(224, 108, 0);
+  background: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
   border-radius: 1rem;
   z-index: -1;
   transition: 0.3s all ease-in-out;
@@ -288,14 +289,13 @@ section {
   border-radius: 2rem;
   font-size: 1.2rem;
   border: none;
-  background-color: #3a8c00;
+  background: linear-gradient(45deg, #337901, #55cd00);
+  transition: background 0.5s ease-in-out;
   color: white;
-  transition: background-color 0.3s ease-out;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
 }
 #HomeSection #HomeContainer button:hover {
-  cursor: url("../../../../public/pizza.svg"), auto;
-  background-color: rgb(224, 108, 0);
+  background: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 #HomeSection #HomeContainer .ContainSearch {
@@ -470,15 +470,14 @@ section {
   border-radius: 2rem;
   font-size: 1.2rem;
   border: none;
-  background-color: #3a8c00;
+  background: linear-gradient(45deg, #337901, #55cd00);
   color: white;
   transition: background-color 0.3s ease-out;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
 }
 #services .container .cards-services-container .containerCard .card-service .service-button:hover {
-  cursor: url("../../../../public/pizza.svg"), auto;
-  background-color: rgb(224, 108, 0);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 #services .container .cards-services-container .containerCard:hover {
   cursor: pointer;
@@ -553,48 +552,88 @@ section {
 }
 .top-restaurants-section .top-restaurants {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   color: white;
 }
-.top-restaurants-section .top-restaurants .top-restaurant {
+.top-restaurants-section .top-restaurants .mySwiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  overflow: hidden;
+  padding: 20px 0;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.top-restaurants-section .top-restaurants .mySwiper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   backdrop-filter: blur(10px);
   padding: 20px;
-  width: 280px;
+  width: 20rem;
+  height: 25rem;
   text-align: center;
-  position: relative;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  perspective: 1000px;
+  cursor: pointer;
 }
-.top-restaurants-section .top-restaurants .top-restaurant:hover {
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
 }
-.top-restaurants-section .top-restaurants .top-restaurant img {
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+  height: 100%;
+  position: relative;
 }
-.top-restaurants-section .top-restaurants .top-restaurant .restaurant-info {
-  margin-top: 15px;
-  text-align: left;
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card.flipped .card-inner {
+  transform: rotateY(180deg);
 }
-.top-restaurants-section .top-restaurants .top-restaurant .restaurant-info h3 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 10px 0;
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
 }
-.top-restaurants-section .top-restaurants .top-restaurant .restaurant-info p {
-  font-size: 1.2rem;
-  color: #ffb300;
-  margin: 10px 0;
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.6s ease-in-out;
+  border: #ff0000 2px solid;
 }
-.top-restaurants-section .top-restaurants .top-restaurant .btn {
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .btn,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .btn {
+  width: fit-content;
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
@@ -608,8 +647,50 @@ section {
   border: none;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
 }
-.top-restaurants-section .top-restaurants .top-restaurant .btn:hover {
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .btn:hover,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .btn:hover {
   cursor: pointer;
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(255, 115, 0, 0.5);
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front img,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .restaurant-info {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  margin-top: 15px;
+  text-align: left;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info h3,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .restaurant-info h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info p,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .restaurant-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info p:last-child,
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .restaurant-info p:last-child {
+  margin-bottom: 10px;
+  color: #ffb300;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: rotateY(0deg);
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: rotateY(180deg);
 }/*# sourceMappingURL=main.css.map */

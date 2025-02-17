@@ -68,15 +68,15 @@
             border-radius: 2rem;
             font-size: 1.2rem;
             border: none;
-            background-color: #3a8c00;
+            background: variables.$bg-button;
             color: white;
             transition: background-color 0.3s ease-out;
             box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
 
             &:hover {
-              cursor: url("../../../../public/pizza.svg"), auto;
-              background-color: variables.$bg-button-header;
-              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+              background: variables.$bg-button-header;
+              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+              
             }
           }
         }

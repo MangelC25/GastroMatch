@@ -118,7 +118,7 @@
             &:hover {
               transition: background-color 0.3s ease-out;
               border-radius: 1rem;
-              background-color: variables.$bg-button-header;
+              background: variables.$bg-button-header;
               box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
 
@@ -163,7 +163,7 @@
         right: 50%;
         bottom: 0;
         opacity: 0;
-        background-color: variables.$bg-button-header;
+        background: variables.$bg-button-header;
         border-radius: 1rem;
         z-index: -1;
         transition: .3s all ease-in-out;
