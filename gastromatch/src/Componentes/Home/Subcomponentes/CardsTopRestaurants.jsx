@@ -20,7 +20,7 @@ export default function CardsTopRestaurants( {title, description, rating} ) {
               <p>{description}</p>
               <p>Rating: {rating}</p>
             </div>
-            <button className="btn">View Menu</button>
+            <button className="btn">Ver Menu</button>
           </div>
           {/* Cara Trasera */}
           <div className="card-back">

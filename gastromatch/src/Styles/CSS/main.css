@@ -111,7 +111,7 @@ section {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   top: 3.5rem;
   background-color: rgb(255, 255, 255);
-  z-index: 1;
+  z-index: 100;
 }
 #header .ContainerLogo {
   user-select: none;
@@ -527,6 +527,7 @@ section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .top-restaurants-section .container {
+  margin: 1rem 0;
   padding: 1rem;
   width: 100%;
 }
@@ -693,4 +694,27 @@ section {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transform: rotateY(180deg);
+}
+
+.shapedividers_com-8372 {
+  overflow: hidden;
+  position: relative;
+  height: 10rem;
+  z-index: -10;
+}
+.shapedividers_com-8372:before {
+  content: "";
+  font-family: "shape divider from ShapeDividers.com";
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  bottom: 1vw;
+  left: -0.1vw;
+  right: -0.1vw;
+  top: -0.1vw;
+  background-size: 100% 150px;
+  background-position: 50% 0%;
+  transform: rotateX(180deg);
+  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23101010" d="M0 288l1440-128v160H0z"/><path fill="%23101010" opacity=".66" d="M0 192l1440-96v224H0z"/></svg>');
 }/*# sourceMappingURL=main.css.map */
