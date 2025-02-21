@@ -1,29 +1,42 @@
-import HomeSection from "./Sections/HomeSection";
-import ServicesSection from "./Sections/ServicesSection";
-import TopRestaurantsSection from "./Sections/TopRestaurantsSection";
+import React, { Suspense, lazy, useMemo } from "react";
 import FadeInOnScroll from "./Subcomponentes/FadeInOnScroll";
-import React from "react";
+
+// 🔹 Cargamos los componentes de forma diferida (Lazy Loading)
+const HomeSection = lazy(() => import("./Sections/HomeSection"));
+const ServicesSection = lazy(() => import("./Sections/ServicesSection"));
+const TopRestaurantsSection = lazy(() =>
+  import("./Sections/TopRestaurantsSection")
+);
+const TopFoodWeek = lazy(() => import("./Sections/TopFoodWeek"));
 
 export default function Home() {
-  const Sections = [
-    { name: "HomeSection", component: HomeSection },
-    { name: "ServicesSection", component: ServicesSection },
-    { name: "TopRestaurantsSection", component: TopRestaurantsSection },
-  ];
+  // 🔹 Usamos useMemo para evitar que estos arrays se reconstruyan en cada render
+  const Sections = useMemo(
+    () => [
+      { name: "HomeSection", component: HomeSection },
+      { name: "ServicesSection", component: ServicesSection },
+      { name: "TopRestaurantsSection", component: TopRestaurantsSection },
+      { name: "TopFoodWeek", component: TopFoodWeek },
+    ],
+    []
+  );
 
-  const ShapeDividers = [
-    { name: "shapedividers_com-4450" },
-    { name: "shapedividers_com-117" },
-    { name: "shapedividers_com-8372" },
-  ];
+  const ShapeDividers = useMemo(
+    () => [
+      { name: "shapedividers_com-4450" },
+      { name: "shapedividers_com-117" },
+      { name: "shapedividers_com-8372" },
+    ],
+    []
+  );
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       {Sections.map((section, index) => {
         const SectionComponent = section.component;
         return (
           <React.Fragment key={section.name}>
-            <FadeInOnScroll key={section.name}>
+            <FadeInOnScroll>
               <SectionComponent />
             </FadeInOnScroll>
 
@@ -35,6 +48,6 @@ export default function Home() {
           </React.Fragment>
         );
       })}
-    </>
+    </Suspense>
   );
 }

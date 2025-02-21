@@ -1,0 +1,127 @@
+@use "../../Globals/variables" as variables;
+
+.top-food-week-section {
+
+  .top-food-week__title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-family: variables.$font-family-Title;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(212, 89, 0, 0.442);
+      background: linear-gradient(to right, #ff0000 10%, #ffb300 25%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      width: 80%;
+    }
+  }
+
+  .top-food-week__content {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .filterfood-container {
+      width: 30%;
+      padding: 1rem;
+
+
+      .food-items {
+        font-family: variables.$font-family-Title;
+        padding: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+        height: 24rem;
+        overflow-y: scroll;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        
+
+        &::-webkit-scrollbar {
+          width: 8px; /* Tamaño del scroll en vertical */
+          
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: linear-gradient(transparent, #ffb300);
+          border-radius: 2rem;
+          
+        }
+
+        .food-item{
+            display: flex;
+            width: 12rem;
+            align-items: center;
+            gap: 1rem;
+            padding: .5rem 1rem;
+            border-radius: 50px;
+            box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: all .2s ease-in;
+
+            img{
+              padding: 2px;
+              transition: all .2s ease-in;
+              vertical-align: middle;
+            }
+
+            &:hover{
+              background-color: #eb9f57;
+              color: white;
+              cursor: pointer;
+
+              img{
+                background-color: white;
+                border-radius: 50%;
+              }
+            }
+            
+        }
+      }
+    }
+
+    .Topfood-container {
+      border: 2px solid #37ff00;
+      width: 65%;
+
+      .topfood-list {
+        border: 2px solid #ff00cc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        height: 70%;
+
+        .topfood-list__item {
+          border: 2px solid #ff0000;
+          background-color: #ffb300;
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 600;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}

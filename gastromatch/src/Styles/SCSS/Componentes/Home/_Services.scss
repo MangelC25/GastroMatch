@@ -1,15 +1,13 @@
 @use "../../Globals/variables" as variables;
 
 #services {
-  .container {
-    padding: 1rem;
-    width: 100%;
+
 
     .section-title {
       font-size: 1.5rem;
       text-align: center;
       margin-bottom: 2rem;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: variables.$font-family-Title;
     }
 
     .cards-services-container {
@@ -107,7 +105,7 @@
       }
     }
   }
-}
+
 
 .shapedividers_com-117 {
   overflow: hidden;

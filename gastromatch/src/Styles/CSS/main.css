@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 :root {
   --bg-topbar: $bg-topbar;
   --text-colortopbar: $text-colortopbar;
@@ -42,6 +43,12 @@ section {
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.container {
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
 }
 
 .TopBar {
@@ -259,7 +266,7 @@ section {
 }
 
 #HomeSection {
-  margin-top: 8.8rem;
+  margin-top: 9rem;
   height: 32rem;
   background: linear-gradient(to right, #62000d, #ff0022);
   z-index: 0;
@@ -275,7 +282,7 @@ section {
 #HomeSection #HomeContainer h1 {
   font-family: "Archivo Black", serif;
   color: rgb(255, 255, 255);
-  font-size: 2.3rem;
+  font-size: 2.35rem;
   text-shadow: 1px 1px 10px #000000;
 }
 #HomeSection #HomeContainer p {
@@ -400,39 +407,32 @@ section {
 
 @keyframes moveBackground {
   0% {
-    background-position: 100% 0; /* Posición inicial */
-  }
-  50% {
-    background-position: 100% 50%; /* Desplaza el fondo hacia arriba */
+    background-position: 100% 0;
   }
   100% {
-    background-position: 100% 100%; /* Regresa al inicio */
+    background-position: 100% 100%; /* Ajusta según el movimiento deseado */
   }
 }
-#services .container {
-  padding: 1rem;
-  width: 100%;
-}
-#services .container .section-title {
+#services .section-title {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", serif;
 }
-#services .container .cards-services-container {
+#services .cards-services-container {
   display: flex;
   gap: 1.8rem;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
 }
-#services .container .cards-services-container .containerCard {
+#services .cards-services-container .containerCard {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.5);
   background: linear-gradient(to bottom, #ffc95d, #ff6700);
 }
-#services .container .cards-services-container .containerCard .card-service {
+#services .cards-services-container .containerCard .card-service {
   display: flex;
   gap: 1.8rem;
   flex-direction: column;
@@ -443,28 +443,28 @@ section {
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.685);
   background-color: white;
 }
-#services .container .cards-services-container .containerCard .card-service .service-image {
+#services .cards-services-container .containerCard .card-service .service-image {
   width: 100%;
   height: 10rem;
   border-radius: 50%;
 }
-#services .container .cards-services-container .containerCard .card-service .service-image img {
+#services .cards-services-container .containerCard .card-service .service-image img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#services .container .cards-services-container .containerCard .card-service .service-title {
+#services .cards-services-container .containerCard .card-service .service-title {
   font-size: 1.2rem;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-#services .container .cards-services-container .containerCard .card-service .service-description {
+#services .cards-services-container .containerCard .card-service .service-description {
   font-size: 0.9rem;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-#services .container .cards-services-container .containerCard .card-service .service-button {
+#services .cards-services-container .containerCard .card-service .service-button {
   width: fit-content;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
@@ -475,28 +475,28 @@ section {
   transition: background-color 0.3s ease-out;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
 }
-#services .container .cards-services-container .containerCard .card-service .service-button:hover {
+#services .cards-services-container .containerCard .card-service .service-button:hover {
   background: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
-#services .container .cards-services-container .containerCard:hover {
+#services .cards-services-container .containerCard:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: transform 0.3s ease-out;
 }
-#services .container .services-description {
+#services .services-description {
   margin-top: 2rem;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-#services .container .services-description p {
+#services .services-description p {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
-#services .container .services-description p #CheckCircle {
+#services .services-description p #CheckCircle {
   color: #3a8c00;
 }
 
@@ -524,12 +524,6 @@ section {
 
 .top-restaurants-section {
   background: linear-gradient(to bottom, #232323, #1a1a1a, #101010);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.top-restaurants-section .container {
-  margin: 1rem 0;
-  padding: 1rem;
-  width: 100%;
 }
 .top-restaurants-section .section-title {
   display: flex;
@@ -539,24 +533,29 @@ section {
   margin-bottom: 2rem;
 }
 .top-restaurants-section .section-title h2 {
+  font-family: "Poppins", serif;
   font-size: 2.5rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(255, 106, 0, 0.6);
   background: linear-gradient(to right, #ff0000 30%, #ffb300 55%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
 }
 .top-restaurants-section .section-title p {
-  width: 70%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 80%;
   color: white;
 }
 .top-restaurants-section .top-restaurants {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
   color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .top-restaurants-section .top-restaurants .mySwiper {
   width: 100%;
@@ -564,15 +563,11 @@ section {
   display: flex;
   justify-items: center;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 3rem 20px;
   margin: 0 auto;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Simplificado */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.top-restaurants-section .top-restaurants .mySwiper:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide {
   display: flex;
@@ -585,20 +580,20 @@ section {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px); /* Simplificado */
   padding: 20px;
-  width: 20rem;
+  width: 18rem;
   height: 25rem;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Simplificado */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   perspective: 1000px;
   cursor: pointer;
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); /* Simplificado */
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card {
   width: 100%;
@@ -625,12 +620,11 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem; /* Simplificado */
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Simplificado */
   transition: transform 0.6s ease-in-out;
-  border: #ff0000 2px solid;
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .btn,
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .btn {
@@ -641,12 +635,12 @@ section {
   font-weight: bold;
   text-decoration: none;
   color: white;
-  background: linear-gradient(90deg, #ff0000, #793400, #ff7300);
+  background: linear-gradient(90deg, #ff0000, #ff9d00);
   border-radius: 8px;
   margin-top: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
   border: none;
-  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Simplificado */
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .btn:hover,
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .btn:hover {
@@ -672,12 +666,12 @@ section {
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info h3,
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .restaurant-info h3 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 10px 0;
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info p,
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back .restaurant-info p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 10px 0;
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front .restaurant-info p:last-child,
@@ -687,13 +681,32 @@ section {
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-front {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px); /* Simplificado */
   transform: rotateY(0deg);
 }
 .top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px); /* Simplificado */
   transform: rotateY(180deg);
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-slide .top-restaurant .card .card-back p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-pagination-bullet {
+  background: #007aff;
+  border-radius: 10px;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+.top-restaurants-section .top-restaurants .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
 .shapedividers_com-8372 {
@@ -717,4 +730,107 @@ section {
   background-position: 50% 0%;
   transform: rotateX(180deg);
   background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23101010" d="M0 288l1440-128v160H0z"/><path fill="%23101010" opacity=".66" d="M0 192l1440-96v224H0z"/></svg>');
+}
+
+.top-food-week-section .top-food-week__title {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.top-food-week-section .top-food-week__title h2 {
+  font-family: "Poppins", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(212, 89, 0, 0.442);
+  background: linear-gradient(to right, #ff0000 10%, #ffb300 25%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+.top-food-week-section .top-food-week__title p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 80%;
+}
+.top-food-week-section .top-food-week__content {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.top-food-week-section .top-food-week__content .filterfood-container {
+  width: 30%;
+  padding: 1rem;
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items {
+  font-family: "Poppins", serif;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  height: 24rem;
+  overflow-y: scroll;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ffb300);
+  border-radius: 2rem;
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items .food-item {
+  display: flex;
+  width: 12rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in;
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items .food-item img {
+  padding: 2px;
+  transition: all 0.2s ease-in;
+  vertical-align: middle;
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items .food-item:hover {
+  background-color: #eb9f57;
+  color: white;
+  cursor: pointer;
+}
+.top-food-week-section .top-food-week__content .filterfood-container .food-items .food-item:hover img {
+  background-color: white;
+  border-radius: 50%;
+}
+.top-food-week-section .top-food-week__content .Topfood-container {
+  border: 2px solid #37ff00;
+  width: 65%;
+}
+.top-food-week-section .top-food-week__content .Topfood-container .topfood-list {
+  border: 2px solid #ff00cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 70%;
+}
+.top-food-week-section .top-food-week__content .Topfood-container .topfood-list .topfood-list__item {
+  border: 2px solid #ff0000;
+  background-color: #ffb300;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.top-food-week-section .top-food-week__content .Topfood-container .topfood-list .topfood-list__item:hover {
+  background-color: #ff0000;
 }/*# sourceMappingURL=main.css.map */

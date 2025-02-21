@@ -1,22 +1,18 @@
-import { useEffect, useState, useRef } from "react";
+
+import { useInView } from "react-intersection-observer"
 import { motion } from "motion/react";
 
 export default function FadeInOnScroll({ children }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const domRef = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setIsVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
+  const { ref, inView } = useInView({
+    threshold: 0, // Activa cuando el 20% del elemento es visible
+    triggerOnce: false, // Se puede disparar múltiples veces
+  });
 
   return (
     <motion.div
-      ref={domRef}
+      ref={ref}
       initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
+      animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {children}

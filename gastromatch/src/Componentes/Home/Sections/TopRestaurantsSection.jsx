@@ -1,6 +1,10 @@
 import CardsTopRestaurants from "../Subcomponentes/CardsTopRestaurants";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function TopRestaurantsSection() {
   const topRestaurants = [
@@ -27,13 +31,22 @@ export default function TopRestaurantsSection() {
         <div className="top-restaurants">
           <Swiper
             className="mySwiper"
+            lazy={true}
             slidesPerView={3}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
             {topRestaurants.map((restaurant, index) => (
-              <SwiperSlide
-               key={index}>
+              <SwiperSlide key={index}>
                 <CardsTopRestaurants
                   title={restaurant.title}
                   description={restaurant.description}

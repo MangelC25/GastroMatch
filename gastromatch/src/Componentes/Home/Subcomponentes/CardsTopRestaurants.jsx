@@ -14,7 +14,7 @@ export default function CardsTopRestaurants( {title, description, rating} ) {
         <div className="card-inner">
           {/* Cara Frontal */}
           <div className="card-front">
-            <img src="images/restaurant-1.jpg" alt={title} />
+            <img src="images/restaurant-1.jpg" alt={title} loading="lazy" />
             <div className="restaurant-info">
               <h3>{title}</h3>
               <p>{description}</p>
