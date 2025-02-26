@@ -31,7 +31,7 @@ export default function TopRestaurantsSection() {
         <div className="top-restaurants">
           <Swiper
             className="mySwiper"
-            lazy={true}
+            lazy={"true"}
             slidesPerView={3}
             autoplay={{
               delay: 2500,
