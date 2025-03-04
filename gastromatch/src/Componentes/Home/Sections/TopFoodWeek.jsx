@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CardFoodWeek from "../Subcomponentes/CardFoodWeek";
+import { motion } from "motion/react";
 
 export default function TopFoodWeek() {
   const icons = [
@@ -25,56 +26,27 @@ export default function TopFoodWeek() {
     },
   ];
 
-  const FoodItem = [
-    {
-      background:
-        "./../../../../../src/assets/img/el-corral-hamburguesas-callejera..png",
-      image:
-        "./../../../../../src/assets/img/el-corral-hamburguesas-todoterreno-callejera..png",
-      name: "Todoterreno Callejera",
-      description: "Dos carnes 100% de res de 125 g a la parrilla cada una, con salsa BBQ, tocineta, papas callejeras, una tajada de queso tipo mozzarella, mostaza y salsa blanca en pan ajonjolí.",
-      rating:4.5,
+height: 10rem;
+  z-index: -10;
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState(icons[0].name);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Intervalo entre tarjetas
+      },
     },
-    {
-      background:
-        "./../../../../../src/assets/img/FribyArepasPollo.jpeg",
-      image:
-        "./../../../../../src/assets/img/pollo.webp",
-      name: "Medio Frisby Bbq Arepas",
-      description: "4 Presas bañadas en salsa bbq ligeramente picante y 6 arepas",
-      rating: 4.5,
-    },{
-      background:
-        "./../../../../../src/assets/img/PerroCaliente.webp",
-      image:
-        "./../../../../../src/assets/img/PerroCaliente.png",
-      name: "King Imperial",
-      description: "Perro caliente con cuatro salchichas americanas zenú, cebolla, 8 huevos de codorniz, salsa de tomate, mayonesa, rosada, piña, jamón, queso y papas chips.",
-      rating: 4.5,
-    },
-  ];
+  };
 
-  const FoodItems = () => {
-    const [activeIndex, setActiveIndex] = useState(0); // Estado para el índice activo
+  const handleActive = (index, category) => {
+    setActiveIndex(index); // Actualiza el estado con el índice del ítem clickeado
+    setSelectedCategory(category);
 
-    const handleActive = (index) => {
-      setActiveIndex(index); // Actualiza el estado con el índice del ítem clickeado
-    };
-
-    return (
-      <div className="food-items">
-        {icons.map((icon, index) => (
-          <div
-            className={`food-item ${activeIndex === index ? "actived" : ""}`}
-            key={index}
-            onClick={() => handleActive(index)} // Pasar el índice al hacer clic
-          >
-            <img src={icon.link} alt={icon.name} />
-            <p>{icon.name}</p>
-          </div>
-        ))}
-      </div>
-    );
+    console.log(category);
   };
 
   return (
@@ -90,10 +62,30 @@ export default function TopFoodWeek() {
         </div>
         <div className="top-food-week__content">
           <div className="filterfood-container">
-            <FoodItems />
+            <div className="food-items">
+              {icons.map((icon, index) => (
+                <div
+                  className={`food-item ${
+                    activeIndex === index ? "actived" : ""
+                  }`}
+                  key={index}
+                  onClick={() => handleActive(index, icon.name)} // Pasar el índice al hacer clic
+                >
+                  <img src={icon.link} alt={icon.name} />
+                  <p>{icon.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="Topfood-container">
-            {FoodItem.map((food, index) => (
+
+          <motion.div
+            className="Topfood-container"
+            key={selectedCategory}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {foodData[selectedCategory]?.map((food, index) => (
               <CardFoodWeek
                 key={index}
                 background={food.background}
@@ -103,7 +95,7 @@ export default function TopFoodWeek() {
                 rating={food.rating}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -26,6 +26,7 @@ export default function Home() {
       { name: "shapedividers_com-4450" },
       { name: "shapedividers_com-117" },
       { name: "shapedividers_com-8372" },
+      { name: "shapedividers_com-2215" },
     ],
     []
   );

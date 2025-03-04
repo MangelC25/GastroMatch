@@ -13,7 +13,7 @@ export default function FadeInOnScroll({ children }) {
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       {children}
     </motion.div>
