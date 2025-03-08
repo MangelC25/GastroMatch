@@ -28,6 +28,44 @@ section{
   width: 100%;
 }
 
+button{
+  position: relative;
+  background: variables.$bg-button;
+  width: 20%;
+  padding: .5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(76, 198, 0, 0.5);
+  pointer-events: all;
+  z-index: 1;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: '';
+    border-radius: 1rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: variables.$bg-button-header;
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+
+
+  &:hover {
+    box-shadow: 5px 5px 10px rgba(255, 145, 0, 0.5);
+
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+
 
 
 
