@@ -1,8 +1,8 @@
 @use "./Globals/globals";
 
-@use "./Componentes/TopBar/TopBar";
+@use "./Componentes/Common/TopBar/TopBar";
 
-@use "./Componentes/Header/Header";
+@use "./Componentes/Common/Header/Header";
 
 @use "./Componentes/Home/Home";
 
@@ -12,7 +12,9 @@
 
 @use "Componentes/Home/TopFoodWeek";
 
-@use "Componentes/Home/EventsFoodSection"
+@use "Componentes/Home/EventsFoodSection";
+
+@use "Componentes/Home/ChefsSections"
 
 
 

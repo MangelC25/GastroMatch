@@ -9,6 +9,7 @@ const TopRestaurantsSection = lazy(() =>
 );
 const TopFoodWeek = lazy(() => import("./Sections/TopFoodWeek"));
 const EventsFoodSection = lazy(()=> import("./Sections/EventsFoodSection"))
+const ChefsSection = lazy(()=> import("./Sections/ChefsSections"))
 
 export default function Home() {
   // 🔹 Usamos useMemo para evitar que estos arrays se reconstruyan en cada render
@@ -19,6 +20,7 @@ export default function Home() {
       { name: "TopRestaurantsSection", component: TopRestaurantsSection },
       { name: "TopFoodWeek", component: TopFoodWeek },
       { name: "EventsFoodSection", component: EventsFoodSection },
+      { name: "ChefsSection n", component: ChefsSection  },
     ],
     []
   );
@@ -29,6 +31,7 @@ export default function Home() {
       { name: "shapedividers_com-117" },
       { name: "shapedividers_com-8372" },
       { name: "shapedividers_com-2215" },
+      { name: "shapedividers_com-2042" },
     ],
     []
   );

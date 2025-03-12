@@ -65,13 +65,23 @@ export default function EventsFoodSection() {
           </article>
           <div id="Event-food-items">
             <Swiper
-            loop={true}
+              loop={true}
               slidesPerView={2}
               autoplay={{ delay: 5000, disableOnInteraction: false }}
               spaceBetween={30}
               modules={[Autoplay]}
               onSlideChange={(swiper) => {
                 setActiveEventIndex(swiper.realIndex);
+              }}
+              onClick={(swiper) => {
+                const clickedSlide = swiper.clickedSlide;
+                if (clickedSlide) {
+                  const clickedIndex = parseInt(
+                    clickedSlide.getAttribute("data-swiper-slide-index")
+                  );
+                  swiper.slideToLoop(clickedIndex, 300);
+                  setActiveEventIndex(clickedIndex);
+                }
               }}
             >
               {bgEventsFood.map((event, index) => (

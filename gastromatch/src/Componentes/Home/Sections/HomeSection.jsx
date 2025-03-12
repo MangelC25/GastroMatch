@@ -1,4 +1,4 @@
-import SearchBox from "../../Header/Search";
+import SearchBox from "../../Common/Header/Search";
 import { motion, AnimatePresence } from "motion/react";
 import AnimatedText from "../Subcomponentes/AnimatedText";
 import { useState, useEffect } from "react";

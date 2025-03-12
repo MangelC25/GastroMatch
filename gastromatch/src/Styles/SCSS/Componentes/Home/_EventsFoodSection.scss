@@ -5,7 +5,7 @@
   z-index: 5;
   margin-top: -7rem;
   background: linear-gradient(to bottom, #363636, #1a1a1a, #101010);
-  height: auto;
+  height: 48rem;
   width: 100%;
   display: flex;
 
@@ -21,11 +21,11 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
 
       h2 {
         font-family: variables.$font-family-Title;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(255, 221, 0, 0.6);
         background: linear-gradient(to right, #b79b00 30%, #ffea00 60%);
@@ -181,5 +181,29 @@
         }
       }
     }
+  }
+}
+
+
+.shapedividers_com-2042{
+  overflow:hidden;
+  position:relative;
+  height: 7rem;
+  z-index: 10;
+  
+  &::before{ 
+  content:'';
+  font-family:'shape divider from ShapeDividers.com';
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  bottom: -0.1vw;
+  left: -0.1vw;
+  right: -0.1vw;
+  top: -0.1vw; 
+  background-size: 100% 100px;
+  background-position: 50% 0%; 
+  transform: rotateY(180deg); background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 773.74 154.98"><g fill="%23101010"><path d="M0 0h773.74L386.87 77.5Z"/><path d="m0 0 386.87 154.98L773.74 0Z" opacity=".66"/></g></svg>'); 
   }
 }
