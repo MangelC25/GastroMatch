@@ -136,6 +136,7 @@ export default function ChefsSection() {
             <Swiper
               effect={"cards"}
               grabCursor={true}
+              rewind={true}
               autoplay={{ delay: 5000, disableOnInteraction: false }}
               spaceBetween={30}
               modules={[Autoplay, EffectCards]}

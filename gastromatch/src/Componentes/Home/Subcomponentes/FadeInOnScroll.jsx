@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function FadeInOnScroll({ children }) {
   const { ref, inView } = useInView({
-    threshold: 0, // Activa cuando el 20% del elemento es visible
+    threshold: 0, // Activa cuando el % del elemento es visible
     triggerOnce: false, // Se puede disparar múltiples veces
   });
 

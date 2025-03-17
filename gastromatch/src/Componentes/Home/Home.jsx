@@ -8,8 +8,10 @@ const TopRestaurantsSection = lazy(() =>
   import("./Sections/TopRestaurantsSection")
 );
 const TopFoodWeek = lazy(() => import("./Sections/TopFoodWeek"));
-const EventsFoodSection = lazy(()=> import("./Sections/EventsFoodSection"))
-const ChefsSection = lazy(()=> import("./Sections/ChefsSections"))
+const EventsFoodSection = lazy(()=> import("./Sections/EventsFoodSection"));
+const ChefsSection = lazy(()=> import("./Sections/ChefsSections"));
+const TestimonialsSection = lazy(()=> import("./Sections/TestimonialsSection"));
+
 
 export default function Home() {
   // 🔹 Usamos useMemo para evitar que estos arrays se reconstruyan en cada render
@@ -20,7 +22,8 @@ export default function Home() {
       { name: "TopRestaurantsSection", component: TopRestaurantsSection },
       { name: "TopFoodWeek", component: TopFoodWeek },
       { name: "EventsFoodSection", component: EventsFoodSection },
-      { name: "ChefsSection n", component: ChefsSection  },
+      { name: "ChefsSection", component: ChefsSection  },
+      { name: "TestimonialsSection", component: TestimonialsSection  },
     ],
     []
   );

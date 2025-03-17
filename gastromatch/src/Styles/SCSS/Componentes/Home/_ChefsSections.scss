@@ -18,7 +18,7 @@
 
       h1 {
         font-family: variables.$font-family-Title;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(78, 33, 0, 0.442);
         background: linear-gradient(to right, #ff0000 10%, #ffb300 25%);
@@ -88,7 +88,6 @@
               flex-direction: column;
               justify-content: space-between;
 
-
               .CardChefInner {
                 position: relative;
                 display: flex;
@@ -96,8 +95,6 @@
                 width: 100%;
                 overflow: hidden;
                 border-radius: 1rem;
-
-
 
                 .ImgChefCard {
                   position: relative;
@@ -109,7 +106,7 @@
                   align-items: center;
                   border-radius: 1rem;
                   overflow: hidden;
-  
+
                   figure {
                     position: relative;
                     width: 100%;
@@ -205,21 +202,21 @@
           font-family: variables.$font-family-Title;
           font-weight: 400;
           margin-bottom: 1rem;
-        
+
           span {
             display: flex;
             align-items: center;
             font-size: 1rem;
-        
+
             .label {
-              color: orange;         // El label en naranja
+              color: orange; // El label en naranja
               margin-right: 0.5rem;
-              font-weight: bold; 
+              font-weight: bold;
               text-shadow: 2px 2px 4px rgba(68, 68, 68, 0.4);
             }
-            
+
             .value {
-              font-weight: bold;      // El valor en negrita
+              font-weight: bold; // El valor en negrita
             }
           }
         }
