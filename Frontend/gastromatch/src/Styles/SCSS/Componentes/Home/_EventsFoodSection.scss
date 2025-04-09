@@ -1,0 +1,209 @@
+@use "../../Globals/variables" as variables;
+
+.Events-food-section {
+  position: relative;
+  z-index: 5;
+  margin-top: -7rem;
+  background: linear-gradient(to bottom, #363636, #1a1a1a, #101010);
+  height: 48rem;
+  width: 100%;
+  display: flex;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    margin-top: 7rem;
+    height: auto;
+    pointer-events: none;
+
+    .Events-food-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-family: variables.$font-family-Title;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(255, 221, 0, 0.6);
+        background: linear-gradient(to right, #b79b00 30%, #ffea00 60%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .Event-food-container {
+      height: 30rem;
+      width: 100%;
+      padding: 1rem;
+      position: relative;
+      display: flex;
+      color: white;
+      font-family: variables.$font-family-Title;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+
+      #Event-food-info,
+      #Event-food-items {
+        width: 50%;
+        padding: 1.5rem;
+      }
+
+      #Event-food-info {
+        h2 {
+          font-size: 2rem;
+          font-weight: bold;
+          letter-spacing: 2px;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      #Event-food-items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-items: center;
+          overflow: hidden;
+          padding: 1rem 20px;
+          margin: 0 auto;
+          border-radius: 15px;
+          box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); /* Simplificado */
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          pointer-events: all;
+
+          .swiper-slide {
+            transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+            transform: scale(
+              0.8
+            ); // Hace que las slides inactivas sean más pequeñas
+            z-index: 1;
+            opacity: 0.7;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+
+            &.swiper-slide-active {
+              transform: scale(1); // Hace que la slide activa sea más grande
+              z-index: 2;
+              opacity: 1;
+            }
+
+            .CardEvent {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+              border-radius: 1rem;
+              overflow: hidden;
+              filter: grayscale(1);
+              user-select: none;
+
+              &.active {
+                filter: grayscale(0);
+              }
+
+              .CardEventInner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition: transform 0.6s;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  backface-visibility: hidden;
+                  border-radius: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #background-events {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          color: white;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              to right,
+              black,
+              rgba(0, 0, 0, 0.2)
+            ); /* Color de la superposición */
+            z-index: 0; /* Asegura que quede sobre la imagen de fondo */
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.shapedividers_com-2042{
+  overflow:hidden;
+  position:relative;
+  height: 7rem;
+  z-index: 10;
+  
+  &::before{ 
+  content:'';
+  font-family:'shape divider from ShapeDividers.com';
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  bottom: -0.1vw;
+  left: -0.1vw;
+  right: -0.1vw;
+  top: -0.1vw; 
+  background-size: 100% 100px;
+  background-position: 50% 0%; 
+  transform: rotateY(180deg); background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 773.74 154.98"><g fill="%23101010"><path d="M0 0h773.74L386.87 77.5Z"/><path d="m0 0 386.87 154.98L773.74 0Z" opacity=".66"/></g></svg>'); 
+  }
+}

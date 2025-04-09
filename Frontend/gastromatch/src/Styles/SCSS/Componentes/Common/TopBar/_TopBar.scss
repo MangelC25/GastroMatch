@@ -1,0 +1,61 @@
+@use "../../../Globals/variables" as variables;
+
+.TopBar {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  background-color: variables.$bg-topbar;
+  color: variables.$text-colortopbar;
+  padding: variables.$global-padding;
+  z-index: 100000;
+
+  .ContainTopBar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+
+    .ContainSocial {
+      gap: 1rem;
+      .LinkSocial {
+        color: variables.$text-colortopbar;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          color: variables.$text-colortopbarHover;
+          cursor : url('../../../../public/pizza.svg'), auto; 
+          transition: 0.5s color ease-in-out;
+        }
+      }
+    }
+
+    .ContainContact {
+      gap: 2rem;
+
+      .ContactC {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+    }
+
+    .ContainContact,
+    .ContainSocial {
+      font-family:  variables.$font-family-Topbar;
+      font-size: 0.8rem;
+      font-style: variables.$font-style-Topbar;
+      font-weight: variables.$font-weight-Topbar;;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+  }
+}

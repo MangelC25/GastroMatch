@@ -1,0 +1,145 @@
+@use "../../Globals/variables" as variables;
+
+#services {
+
+    .section-title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-family: variables.$font-family-Title;
+
+      h2 {
+        font-family: variables.$font-family-Title;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(140, 58, 0, 0.6);
+        background: linear-gradient(to right, #ff0000 30%, #ffb300 55%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+      }
+    }
+
+    .cards-services-container {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+     
+
+      .containerCard {
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to bottom,#ffc95d,#ff6700);
+        transition: transform .5s ease-in-out;
+
+        .card-service {
+          display: flex;
+          gap: 1.8rem;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          border-radius: 1rem;
+          box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.685);
+          background-color: white;
+
+          .service-image {
+            width: 100%;
+            height: 10rem;
+            border-radius: 50%;
+
+            img {
+              border-radius: 50%;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .service-title {
+            font-size: 1.2rem;
+            text-align: center;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+
+          .service-description {
+            font-size: .9rem;
+            text-align: center;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          }
+
+          .service-button {
+            width: fit-content;
+            padding: 0.5rem 2rem;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            border: none;
+            background: variables.$bg-button;
+            color: white;
+            transition: background-color 0.3s ease-out;
+            box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.569);
+
+            &:hover {
+              background: variables.$bg-button-header;
+              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+              
+            }
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+          transition: transform 0.3s ease-out;
+        }
+      }
+    }
+
+    .services-description {
+      margin-top: 2rem;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+      p {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        #CheckCircle {
+          color: #3a8c00;
+        }
+      }
+    }
+  }
+
+
+.shapedividers_com-117 {
+  overflow: hidden;
+  position: relative;
+  height: 10rem;
+  z-index: -10;
+
+  &::before {
+    content: "";
+    font-family: "shape divider from ShapeDividers.com";
+    position: absolute;
+    z-index: -3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw;
+    background-size: 100% 150px;
+    background-position: 50% 100%;
+    background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="%23232323" d="M0 288l1440-128v160H0z"/><path fill="%23232323" opacity=".66" d="M0 192l1440-96v224H0z"/></svg>'); 
+  }
+}
+
+
